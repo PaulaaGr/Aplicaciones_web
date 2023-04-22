@@ -1,17 +1,19 @@
 function validarTipo(){
 
     var tipo=document.getElementById('tipo').value;
+    var text = isNaN(tipo)
 
-    if ( typeof Number(tipo)){
+    if ( tipo != ''){
+        if (text==true){
 
-        document.getElementById ('area').value="Numero";
+        document.getElementById ('area').value="Texto";
         document.getElementById ('tipo');
 
+        } else if(text == false){ 
 
-    } else if(typeof String(tipo)){ 
-
-        document.getElementById('area').value="Texto";
+        document.getElementById('area').value="Numero";
         document.getElementById('tipo');
         document.getElementById('tipo');
+        }
     }
 }

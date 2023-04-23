@@ -15,7 +15,7 @@
 .paginaPrincipal header,
 .paginaPrincipal footer {
     width: 100%;
-    background-color: #a8b82d9a;
+    background-color: #98a62ec9;
     height: 150px;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@
 }
 
 .colorWhite {
-    color: #000000;
+    color: #ffffff;
     font-size: 30px;
 }
 

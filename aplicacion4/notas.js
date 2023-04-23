@@ -5,28 +5,34 @@ function notas() {
     var nota1 = document.getElementById('nota1').value;
     var nota2 = document.getElementById('nota2').value;
     var nota3 = document.getElementById('nota3').value;
+    var area = document.getElementById('area');
 
     var sumaNotas = (parseFloat(nota1) +parseFloat (nota2) +parseFloat (nota3));
     var promedio= sumaNotas/3;
 
     if (promedio<30){
-        var noPasa = (" su nota es "+promedio);
+        var noPasa = (" ,su nota es "+promedio);
 
     }else{
-        var pasa = " su nota es "+promedio;
+        var pasa = " ,su nota es "+promedio;
     }
 
     if (promedio<30){
-        document.getElementById('area').value = "Lo siento "+nombre+ noPasa + " ,no pasó la materia de: "+materia;
+        area.innerHTML = "Lo siento "+nombre+ "<font color= red>"+ noPasa +"</font>" +" ,no pasó la materia de: "+materia;
+        document.getElementById('nopasa');
         document.getElementById('nombre');
         document.getElementById('materia');
-        document.getElementById('noPasa').style.font="red";
-        document.getElementById('pasa').style.font="green";
+        // document.getElementById('area').value.innerHTML = "Lo siento "+nombre+ "<font color= red>"+ noPasa +"</font>" +" no pasó la materia de: "+materia;
+        // document.getElementById('nopasa');
+        // document.getElementById('nombre');
+        // document.getElementById('materia');
+        
     }else{
-        document.getElementById('area').value = "Felicidades "+nombre+ pasa + " ,pasó la materia de: "+materia;
+        
+        area.innerHTML = "Felicidades "+nombre+"<font color=green>"+pasa+"</font>"+ " ,pasó la materia de: "+materia;
+        document.getElementById('pasa');
         document.getElementById('nombre');
         document.getElementById('materia');
-        document.getElementById('pasa').style.font="green";
-        document.getElementById('noPasa').style.font="red";
+        
     }
 }
